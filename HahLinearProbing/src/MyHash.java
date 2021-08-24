@@ -46,7 +46,7 @@ public class MyHash {
                     }
                 }
                 this.hashTable[currAddress] = new Slot(key, value);
-                 return true;
+                return true;
             }
 
         }else
@@ -84,6 +84,15 @@ public class MyHash {
         } else {
             return null;
         }
+    }
+
+    public static void main(String[] args) {
+        MyHash mainObject = new MyHash(20);
+        mainObject.saveData("DaveLee", "01022223333");
+        mainObject.saveData("fun-coding", "01033334444");
+        mainObject.saveData("David", "01044445555");
+        mainObject.saveData("Dave", "01055556666");
+        System.out.println(mainObject.getData("DaveLee"));
     }
 
 
